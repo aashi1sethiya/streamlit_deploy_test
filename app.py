@@ -16,8 +16,9 @@ selected_gender = st.selectbox("What gender do you want to filter for?", ['all p
 #File uploader - if no file uploaded use default file - if uploaded use their file
 penguins_file = st.file_uploader("Select Your Local Penguins CSV (default provided)")
 
+@st.cache_data()
 def load_file(penguins_file):
-    time.sleep(3)
+    time.sleep(5)
     if penguins_file is not None:
         df = pd.read_csv(penguins_file)
     else:
