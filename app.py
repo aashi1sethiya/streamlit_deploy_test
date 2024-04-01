@@ -25,8 +25,6 @@ def load_file(penguins_file):
     return(df)
 penguins_df = load_file(penguins_file)
 
-#penguin gender filter app
-
 if selected_gender == "male penguins":
     penguins_df = penguins_df[penguins_df['sex'] == 'male']
 elif selected_gender == "female penguins":
